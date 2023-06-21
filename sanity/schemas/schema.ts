@@ -1,0 +1,27 @@
+import { SchemaTypeDefinition } from 'sanity'
+import home from './documents/home'
+import settings from './documents/settings'
+import header from './objects/header'
+import imageSimple from './objects/imageSimple'
+import link from './objects/link'
+import portableTextSimple from './objects/portableTextSimple'
+import seo from './objects/seo'
+import video from './objects/video'
+import cta from './sections/cta'
+
+export const schema: { types: SchemaTypeDefinition[] } = {
+types: [
+	// Document Types
+	home,
+	settings,
+	// Object Types
+	header,
+	imageSimple,
+	link,
+	portableTextSimple,
+	seo,
+	video,
+	// Page Builder Sections
+	cta,
+]
+}
