@@ -1,3 +1,5 @@
+import Favicon from "@/components/Favicon";
+import "./globals.css";
 import localFont from "next/font/local";
 
 const gotham = localFont({
@@ -44,6 +46,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Favicon />
+      </head>
       <body
         className={`flex h-screen w-screen flex-col bg-gray-200 ${gotham.variable}`}
       >
