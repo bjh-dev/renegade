@@ -1,5 +1,6 @@
 import { SchemaTypeDefinition } from 'sanity'
 import home from './documents/home'
+import page from './documents/page'
 import settings from './documents/settings'
 import header from './objects/header'
 import imageSimple from './objects/imageSimple'
@@ -13,6 +14,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
 types: [
 	// Document Types
 	home,
+  page,
 	settings,
 	// Object Types
 	header,

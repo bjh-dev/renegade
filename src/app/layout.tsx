@@ -1,9 +1,19 @@
-import Favicon from "@/components/Favicon";
 import "./globals.css";
 import localFont from "next/font/local";
+import { Metadata } from "next";
 
 const gotham = localFont({
   src: [
+    {
+      path: "../../public/font/GothamPro-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/GothamPro-LightItalic.woff2",
+      weight: "300",
+      style: "italic",
+    },
     {
       path: "../../public/font/GothamPro-Bold.woff2",
       weight: "bold",
@@ -34,6 +44,34 @@ const gotham = localFont({
   display: "swap",
 });
 
+export const metadata: Metadata = {
+  generator: "Next.js",
+  applicationName: "Renegade BJJ Academy | Kensington, Melbourne",
+  keywords: [
+    "bjj",
+    "renegade",
+    "kensington",
+    "melbourne",
+    "mma",
+    "renegade mma",
+  ],
+  authors: [{ name: "Bryan Hickey", url: "https://www.bjh.dev/" }],
+  creator: "Bryan Hickey",
+  publisher: "Bryan Hickey",
+  themeColor: "#008759",
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/images/favicons/favicon-32x32.png",
+    shortcut: "/images/favicons/favicon-32x32.png",
+    apple: "/images/favicons/apple-touch-icon.png",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -41,11 +79,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <Favicon />
-      </head>
       <body
-        className={`flex h-screen w-screen flex-col bg-gray-200 ${gotham.variable}`}
+        className={`flex h-screen w-screen flex-col bg-gray-200 ${gotham.variable} font-sans`}
       >
         {children}
       </body>

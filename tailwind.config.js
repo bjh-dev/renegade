@@ -23,7 +23,29 @@ module.exports = {
 				sans: ['var(--gotham)', ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
-				black: '#101820',
+				black: {
+            DEFAULT: '#111820',
+            '50': '#f0f3f5',
+            '100': '#dce5e8',
+            '200': '#afbfc7',
+            '300': '#869aa6',
+            '400': '#435563',
+            '500': '#111820',
+            '600': '#0f161f',
+            '700': '#0a101a',
+            '800': '#070c14',
+            '900': '#04080f',
+            '950': '#02040a'
+        },
+        gray: {
+          DEFAULT: '#cac8c8',
+          '50': '#fcfcfc',
+          '100': '#fafafa',
+          '200': '#f2f2f2',
+          '300': '#ebebeb',
+          '400': '#d9d7d7',
+          '500': '#cac8c8',
+        },
 				primary: {
 					DEFAULT: '#008759',
 					50: '#f2f9f7',
