@@ -1,81 +1,82 @@
-import "./globals.css";
-import localFont from "next/font/local";
-import { Metadata } from "next";
+import './globals.css'
+
+import { Metadata } from 'next'
+import localFont from 'next/font/local'
 
 const gotham = localFont({
   src: [
     {
-      path: "../../public/font/GothamPro-Light.woff2",
-      weight: "300",
-      style: "normal",
+      path: '../../public/font/GothamPro-Light.woff2',
+      weight: '300',
+      style: 'normal',
     },
     {
-      path: "../../public/font/GothamPro-LightItalic.woff2",
-      weight: "300",
-      style: "italic",
+      path: '../../public/font/GothamPro-LightItalic.woff2',
+      weight: '300',
+      style: 'italic',
     },
     {
-      path: "../../public/font/GothamPro-Bold.woff2",
-      weight: "bold",
-      style: "normal",
+      path: '../../public/font/GothamPro-Bold.woff2',
+      weight: 'bold',
+      style: 'normal',
     },
     {
-      path: "../../public/font/GothamPro-Black.woff2",
-      weight: "900",
-      style: "normal",
+      path: '../../public/font/GothamPro-Black.woff2',
+      weight: '900',
+      style: 'normal',
     },
     {
-      path: "../../public/font/GothamPro-Italic.woff2",
-      weight: "400",
-      style: "italic",
+      path: '../../public/font/GothamPro-Italic.woff2',
+      weight: '400',
+      style: 'italic',
     },
     {
-      path: "../../public/font/GothamPro-BoldItalic.woff2",
-      weight: "bold",
-      style: "italic",
+      path: '../../public/font/GothamPro-BoldItalic.woff2',
+      weight: 'bold',
+      style: 'italic',
     },
     {
-      path: "../../public/font/GothamPro.woff2",
-      weight: "400",
-      style: "normal",
+      path: '../../public/font/GothamPro.woff2',
+      weight: '400',
+      style: 'normal',
     },
   ],
-  variable: "--gotham",
-  display: "swap",
-});
+  variable: '--gotham',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  generator: "Next.js",
-  applicationName: "Renegade BJJ Academy | Kensington, Melbourne",
+  generator: 'Next.js',
+  applicationName: 'Renegade BJJ Academy | Kensington, Melbourne',
   keywords: [
-    "bjj",
-    "renegade",
-    "kensington",
-    "melbourne",
-    "mma",
-    "renegade mma",
+    'bjj',
+    'renegade',
+    'kensington',
+    'melbourne',
+    'mma',
+    'renegade mma',
   ],
-  authors: [{ name: "Bryan Hickey", url: "https://www.bjh.dev/" }],
-  creator: "Bryan Hickey",
-  publisher: "Bryan Hickey",
-  themeColor: "#008759",
-  manifest: "/manifest.json",
+  authors: [{ name: 'Bryan Hickey', url: 'https://www.bjh.dev/' }],
+  creator: 'Bryan Hickey',
+  publisher: 'Bryan Hickey',
+  themeColor: '#008759',
+  manifest: '/manifest.json',
   icons: {
-    icon: "/images/favicons/favicon-32x32.png",
-    shortcut: "/images/favicons/favicon-32x32.png",
-    apple: "/images/favicons/apple-touch-icon.png",
+    icon: '/images/favicons/favicon-32x32.png',
+    shortcut: '/images/favicons/favicon-32x32.png',
+    apple: '/images/favicons/apple-touch-icon.png',
   },
   viewport: {
-    width: "device-width",
+    width: 'device-width',
     initialScale: 1,
     maximumScale: 1,
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
@@ -85,5 +86,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  );
+  )
 }

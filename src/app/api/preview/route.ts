@@ -1,8 +1,9 @@
+import { draftMode } from 'next/headers'
+import { redirect } from 'next/navigation'
+
 import { previewSecretId, readToken } from '@/sanity/lib/api'
 import { getClient } from '@/sanity/lib/client'
 import { resolveHref } from '@/sanity/lib/links'
-import { draftMode } from 'next/headers'
-import { redirect } from 'next/navigation'
 import { getSecret } from '@/sanity/plugins/productionUrl/utils'
 
 export async function GET(request: Request) {

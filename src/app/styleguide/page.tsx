@@ -1,4 +1,4 @@
-import ColourChip from "@/app/styleguide/ColourChip";
+import ColourChip from '@/app/styleguide/ColourChip'
 
 const Styleguide = () => {
   return (
@@ -19,7 +19,7 @@ const Styleguide = () => {
           This styleguide is a resource for anyone working with the Renegade
           brand identity. It’s designed to help you understand our visual
           identity and how to use it correctly. If you have any questions,
-          please{" "}
+          please{' '}
           <a
             className="underline hover:text-primary hover:decoration-primary decoration-2 underline-offset-2"
             href="mailto:info@renegadebjj.com.au?subject=Renegade Stylguide Enquiry"
@@ -69,7 +69,7 @@ const Styleguide = () => {
         <div>
           <h3 className="font-bold">Headings</h3>
           <p>
-            Headings are set in Gotham Bold. Gotham is a commercial typeface by{" "}
+            Headings are set in Gotham Bold. Gotham is a commercial typeface by{' '}
             <a
               className="underline hover:text-primary hover:decoration-primary decoration-2 underline-offset-2"
               href="https://www.typography.com/fonts/gotham/overview"
@@ -79,7 +79,7 @@ const Styleguide = () => {
               Hoefler&Co
             </a>
             . A licence must be purchased to use this font. If you don’t have
-            access to Gotham, you can use the free alternative{" "}
+            access to Gotham, you can use the free alternative{' '}
             <a
               className="underline hover:text-primary hover:decoration-primary decoration-2 underline-offset-2"
               href="https://fonts.google.com/specimen/Montserrat"
@@ -87,7 +87,7 @@ const Styleguide = () => {
               rel="noreferrer noopener"
             >
               Montserrat Bold
-            </a>{" "}
+            </a>{' '}
             from Google Fonts.
           </p>
         </div>
@@ -95,7 +95,7 @@ const Styleguide = () => {
           <h3 className="font-bold">Body Copy</h3>
           <p>
             Body copy is set in Sentinel Book. Sentinel is a commercial typeface
-            by{" "}
+            by{' '}
             <a
               className="underline hover:text-primary hover:decoration-primary decoration-2 underline-offset-2"
               href="https://www.typography.com/fonts/sentinel/overview"
@@ -105,7 +105,7 @@ const Styleguide = () => {
               Hoefler&Co
             </a>
             . A licence must be purchased to use this font. If you don’t have
-            access to Sentinel, you can use the free alternative{" "}
+            access to Sentinel, you can use the free alternative{' '}
             <a
               className="underline hover:text-primary hover:decoration-primary decoration-2 underline-offset-2"
               href="https://fonts.google.com/specimen/Domine"
@@ -113,7 +113,7 @@ const Styleguide = () => {
               rel="noreferrer noopener"
             >
               Domine Regular
-            </a>{" "}
+            </a>{' '}
             from Google Fonts.
           </p>
           <h3 className="font-bold mt-6">Sample</h3>
@@ -132,7 +132,7 @@ const Styleguide = () => {
         <h2 className="font-bold text-2xl">Logo</h2>
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default Styleguide;
+export default Styleguide

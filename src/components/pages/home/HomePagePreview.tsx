@@ -1,9 +1,10 @@
 'use client'
 
+import { useLiveQuery } from 'next-sanity/preview'
+
+import HomePage, { type HomePageProps } from '@/components/pages/home/HomePage'
 import { homePageQuery } from '@/lib/queries'
 import { HomePagePayload } from '@/lib/types'
-import { useLiveQuery } from 'next-sanity/preview'
-import HomePage, { type HomePageProps } from '@/components/pages/home/HomePage'
 
 const HomePagePreview = ({ data: initialData }: HomePageProps) => {
   const [data] = useLiveQuery<HomePagePayload | null>(

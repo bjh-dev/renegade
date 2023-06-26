@@ -1,24 +1,24 @@
-import { clsx } from "clsx";
+import { clsx } from 'clsx'
 
 type ColourChip = {
-  name: string;
-  pantone: string;
-  cmyk: string;
-  rgb: string;
-  hex: string;
-};
+  name: string
+  pantone: string
+  cmyk: string
+  rgb: string
+  hex: string
+}
 const ColourChip = (props: ColourChip) => {
-  const { name, pantone, cmyk, rgb, hex } = props;
+  const { name, pantone, cmyk, rgb, hex } = props
   return (
     <>
       <div className="flex flex-col space-y-2 border border-gray-400 p-4 rounded-md">
         <h3 className="font-bold">{name}</h3>
         <div
-          className={clsx("w-full h-24 inline-block", {
-            "bg-primary": name === "Primary",
-            "bg-black": name === "Black",
-            "bg-gray": name === "Gray",
-            "bg-white": name === "White",
+          className={clsx('w-full h-24 inline-block', {
+            'bg-primary': name === 'Primary',
+            'bg-black': name === 'Black',
+            'bg-gray': name === 'Gray',
+            'bg-white': name === 'White',
           })}
         />
         <dl className="flex flex-col text-xs">
@@ -41,7 +41,7 @@ const ColourChip = (props: ColourChip) => {
         </dl>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ColourChip;
+export default ColourChip

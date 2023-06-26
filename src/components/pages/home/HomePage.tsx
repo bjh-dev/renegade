@@ -1,5 +1,3 @@
-import { Any } from 'next-sanity'
-
 import ClassesList from '@/components/ClassesList'
 import CovidSafe from '@/components/CovidSafe'
 import Footer from '@/components/Footer'

@@ -24,7 +24,7 @@ const Memberships = (props: MembershipProps) => {
     frequency,
     membershipFeatures,
   } = props.data
-  console.log('Memberships: ', props)
+  // console.log('Memberships: ', props)
   return (
     <div id="memberships" className="container py-12 md:py-20 lg:py-24">
       <div className="flex flex-col space-y-6 max-w-lg">
