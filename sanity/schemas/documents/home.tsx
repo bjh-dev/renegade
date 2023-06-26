@@ -37,8 +37,7 @@ export default defineType({
       name: 'content',
       title: 'Content',
       group: 'content',
-      type: 'array',
-      of: [{ type: 'cta' }],
+      type: 'pageBuilder',
     }),
     defineField({
       name: 'seo',

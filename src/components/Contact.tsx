@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
 const Contact = () => {
   return (
-    <div id="contact" className="bg-gray-200 py-24">
+    <div id="contact" className="bg-black text-white py-24">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
@@ -11,7 +11,7 @@ const Contact = () => {
             </h2>
           </div>
           <div className="col-span-1 md:col-span-1 md:col-start-1 lg:col-span-1 lg:col-start-2">
-            <address className="not-italic text-gray-800">
+            <address className="not-italic">
               <p className="">92 Parsons Street</p>
               <p className="">Kensington VIC</p>
               <p className="">3031</p>
@@ -28,11 +28,11 @@ const Contact = () => {
             </address>
           </div>
           <div className="col-span-1 md:col-span-2 md:col-start-2 lg:col-span-1 lg:col-start-3">
-            <address className="not-italic text-gray-800">
+            <address className="not-italic">
               <p className="">
                 <a
                   className="underline hover:text-primary"
-                  href="tel:+6139482787"
+                  href="tel:+6139481787"
                 >
                   (03) 9482 1787
                 </a>
@@ -50,7 +50,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

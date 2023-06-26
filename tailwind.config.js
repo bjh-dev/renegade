@@ -37,15 +37,6 @@ module.exports = {
             '900': '#04080f',
             '950': '#02040a'
         },
-        gray: {
-          DEFAULT: '#cac8c8',
-          '50': '#fcfcfc',
-          '100': '#fafafa',
-          '200': '#f2f2f2',
-          '300': '#ebebeb',
-          '400': '#d9d7d7',
-          '500': '#cac8c8',
-        },
 				primary: {
 					DEFAULT: '#008759',
 					50: '#f2f9f7',

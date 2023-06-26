@@ -9,3 +9,8 @@ export const settingsQuery = groq`
 *[_type == "settings"][0] {
   ...,
 }`
+
+export const allClassesQuery = groq`
+*[_type == "classes"] {
+  ...,
+}`

@@ -1,15 +1,23 @@
-const Reviews = () => {
+import { CustomPortableText } from '@/components/CustomPortableText'
+
+const Reviews = (props: any) => {
+  const { title, subtitle, shortDescription, leaveAReview } = props.data
+  // console.log('Reviews: ', props)
   return (
     <div className="bg-gray-900 py-12">
       <div className="container">
-        <div>
-          <h2 className="text-base font-semibold uppercase tracking-wide text-primary">
-            GOOGLE REVIEWS
-          </h2>
-          <p className="mt-4 max-w-2xl text-xl text-gray-200">
-            Don&apos;t just take our word for it. Check out what others say
-            about Renegade.
-          </p>
+        <div className="flex flex-col space-y-6 max-w-lg">
+          <div>
+            {subtitle && (
+              <h3 className="text-primary uppercase font-bold">{subtitle}</h3>
+            )}
+            {title && (
+              <h2 className="mt-1 text-3xl text-white font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                {title}
+              </h2>
+            )}
+          </div>
+          {shortDescription && <p className="text-white">{shortDescription}</p>}
         </div>
         <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 lg:gap-12 xl:grid-cols-4">
           {/* {reviews.map((review) => (
@@ -27,39 +35,16 @@ const Reviews = () => {
           ))} */}
         </div>
         <div className="mt-6 justify-between border-t-2 border-gray-800 pt-6 text-sm text-white lg:flex">
-          <div>
-            {` `}
-            Tells us what you think.{` `}
-            <a
-              href="https://www.google.com/search?q=renegade+mma+bjj&oq=renegade+mma+bjj&aqs=chrome..69i57j46i13i175i199j0i13j46i13i175i199j0i13l4j0i22i30.4392j1j9&sourceid=chrome&ie=UTF-8#lrd=0x6ad65d191140a833:0xfa85d323f5f6f44,1,,,"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary after:content-['_↗']"
-            >
-              Leave a review.
-            </a>
-          </div>
-          {/* {placeData.map((place) => (
-            <div key={place.rating}>
-              <p className="my-2 lg:my-0 lg:text-right">
-                Average
-                {` `}
-                <span className="text-primary">{place.rating}</span>
-                {` `}
-                stars (from
-                {` `}
-                <span className="text-primary">
-                  {place.user_ratings_total}
-                </span>
-                {` `}
-                reviews).
-              </p>
-            </div>
-          ))} */}
+          {leaveAReview && (
+            <CustomPortableText
+              value={leaveAReview}
+              paragraphClasses="mt-4 text-white"
+            />
+          )}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Reviews;
+export default Reviews

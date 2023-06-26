@@ -1,39 +1,39 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-const CovidSafe = () => {
+import { CustomPortableText } from '@/components/CustomPortableText'
+import { urlForImage } from '@/sanity/lib/image'
+
+const CovidSafe = (props: any) => {
+  const { title, subtitle, text, image } = props.data
+  // console.log('CovidSafe: ', props.data)
   return (
     <div className="p-12 lg:container">
-      <div className="grid grid-cols-1 place-items-center bg-primary xl:grid-cols-2">
+      <div className="grid grid-cols-1 place-items-center bg-gray xl:grid-cols-2 rounded-lg">
         <div className="col-span-1">
           <Image
-            className="max-h-96 object-fill"
-            src="/images/facility.jpg"
-            alt="Renegade MMA Covid Clean Gym"
+            className="object-fill rounded-t-lg"
+            src={urlForImage(image).url()}
+            alt={image.alt}
             width={1200}
             height={900}
           />
         </div>
-        <div className="col-span-1">
-          <div className="p-6 py-12 lg:py-6">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900">
-              our commitment to cleanliness
-            </h2>
-            <p className="mt-2 text-4xl font-extrabold tracking-tight text-white sm:text-4xl md:text-3xl">
-              COVID-19 Clean
-            </p>
-            <p className="mt-4 lg:text-base">
-              The impacts of COVID-19 are significant for all martial arts
-              academies. Being closed for business and more importantly limited
-              in the ways we could connect with our team hurt. That’s why we are
-              committed to keeping our facilities, staff and members as safe as
-              possible with our COVID-19 Safety Policy in line with health
-              recommendations.
-            </p>
+        <div className="col-span-1 flex flex-col space-y-6 p-8">
+          <div>
+            {subtitle && (
+              <h3 className="text-primary uppercase font-bold">{subtitle}</h3>
+            )}
+            {title && (
+              <h2 className="mt-1 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                {title}
+              </h2>
+            )}
           </div>
+          {text && <CustomPortableText value={text} paragraphClasses="mt-4" />}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CovidSafe;
+export default CovidSafe

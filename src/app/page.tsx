@@ -1,14 +1,14 @@
-import { urlForImage } from '@/sanity/lib/image'
-
-import { getClient } from '@/sanity/lib/client'
 import { Metadata } from 'next'
-import { readToken } from '@/sanity/lib/api'
 import { draftMode } from 'next/headers'
+import { notFound } from 'next/navigation'
+
+import HomePage from '@/components/pages/home/HomePage'
+import HomePagePreview from '@/components/pages/home/HomePagePreview'
 import { homePageQuery, settingsQuery } from '@/lib/queries'
 import { HomePagePayload, SettingsPayload } from '@/lib/types'
-import { notFound } from 'next/navigation'
-import HomePagePreview from '@/components/pages/home/HomePagePreview'
-import HomePage from '@/components/pages/home/HomePage'
+import { readToken } from '@/sanity/lib/api'
+import { getClient } from '@/sanity/lib/client'
+import { urlForImage } from '@/sanity/lib/image'
 
 export async function generateMetadata(): Promise<Metadata> {
   const preview = draftMode().isEnabled ? { token: readToken! } : undefined
@@ -64,7 +64,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const IndexRoute = async () => {
   const preview = draftMode().isEnabled ? { token: readToken! } : undefined
   const client = getClient(preview)
-  const data = await client.fetch<HomePagePayload | null>(homePageQuery)
+  const data = await client.fetch<HomePagePayload>(homePageQuery)
 
   if (!data && !preview) {
     notFound()

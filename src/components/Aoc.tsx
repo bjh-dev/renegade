@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 const Aoc = () => {
   return (
@@ -19,13 +19,13 @@ const Aoc = () => {
           height={82}
         />
       </div>
-      <p className="mt-6 text-base text-gray-500">
+      <p className="mt-6 text-base">
         Renegade acknowledges the Traditional Owners of the lands on which we
         gather to train, and we pay our respects to their Elders past, present,
         and emerging.
       </p>
     </>
-  );
-};
+  )
+}
 
-export default Aoc;
+export default Aoc
