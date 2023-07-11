@@ -1,19 +1,19 @@
-import Form from '@/components/Form'
-import TextCard from '@/components/TextCard'
+import Form from "@/components/Form";
+import TextCard from "@/components/TextCard";
 
 type MembershipProps = {
   data: {
-    title: string
-    subtitle: string
-    shortDescription: string
-    price: number
-    frequency: string
+    title: string;
+    subtitle: string;
+    shortDescription: string;
+    price: number;
+    frequency: string;
     membershipFeatures: {
-      title: string
-      description: string
-    }[]
-  }
-}
+      title: string;
+      description: string;
+    }[];
+  };
+};
 
 const Memberships = (props: MembershipProps) => {
   const {
@@ -23,11 +23,9 @@ const Memberships = (props: MembershipProps) => {
     price,
     frequency,
     membershipFeatures,
-  } = props.data
-  // console.log('Memberships: ', props)
-  // Test
+  } = props.data;
   return (
-    <div id="memberships" className="container py-12 md:py-20 lg:py-24">
+    <div id="memberships" className="container pt-12 md:pt-20 lg:pt-24">
       <div className="flex flex-col space-y-6 max-w-lg">
         <div>
           {subtitle && (
@@ -68,15 +66,14 @@ const Memberships = (props: MembershipProps) => {
             </div>
             <div className="justify-center text-5xl font-extrabold text-gray-900">
               <p className="text-2xl font-bold text-white">
-                {frequency == 'weekly' ? 'per week' : 'per month'}
+                {frequency == "weekly" ? "per week" : "per month"}
               </p>
             </div>
           </div>
         </div>
       </div>
-      <Form />
     </div>
-  )
-}
+  );
+};
 
-export default Memberships
+export default Memberships;

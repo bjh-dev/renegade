@@ -1,24 +1,27 @@
-import { PortableText, PortableTextComponents } from '@portabletext/react'
-import clsx from 'clsx'
-import Image from 'next/image'
-import { PortableTextBlock } from 'sanity'
+import { PortableText, PortableTextComponents } from "@portabletext/react";
+import clsx from "clsx";
+import Image from "next/image";
+import { PortableTextBlock } from "sanity";
 
-import { urlForImage } from '@/sanity/lib/image'
+import { urlForImage } from "@/sanity/lib/image";
 
 export function CustomPortableText({
   paragraphClasses,
   value,
 }: {
-  paragraphClasses?: string
-  value: PortableTextBlock[]
+  paragraphClasses?: string;
+  value: PortableTextBlock[];
 }) {
   const components: PortableTextComponents = {
     block: {
       normal: ({ children }) => {
-        return <p className={paragraphClasses}>{children}</p>
+        return <p className={paragraphClasses}>{children}</p>;
       },
       h3: ({ children }) => {
-        return <h3 className="my-2 text-2xl font-bold">{children}</h3>
+        return <h3 className="my-2 text-2xl font-bold">{children}</h3>;
+      },
+      small: ({ children }) => {
+        return <p className="mt-2 text-xs">{children}</p>;
       },
     },
     marks: {
@@ -28,18 +31,18 @@ export function CustomPortableText({
           <a
             title={`Link to ${children}`}
             className={clsx(
-              'underline transition-all duration-300 ease-in-out hover:text-white text-primary',
+              "underline transition-all duration-300 ease-in-out hover:text-white text-primary",
               {
                 "after:content-['_↗']": value?.blank,
               }
             )}
             href={value?.href}
             rel="noreferrer noopener"
-            {...(value?.blank && { target: '_blank' })}
+            {...(value?.blank && { target: "_blank" })}
           >
             {children}
           </a>
-        )
+        );
       },
     },
     types: {
@@ -54,7 +57,7 @@ export function CustomPortableText({
                 fill
               />
             </div>
-          )
+          );
         } else {
           return (
             <figure className="m-10 mx-auto rounded-lg bg-gray-100 shadow-lg">
@@ -70,11 +73,11 @@ export function CustomPortableText({
                 {value.caption}
               </figcaption>
             </figure>
-          )
+          );
         }
       },
     },
-  }
+  };
 
-  return <PortableText components={components} value={value} />
+  return <PortableText components={components} value={value} />;
 }

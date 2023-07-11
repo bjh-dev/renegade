@@ -1,6 +1,8 @@
 import { SchemaTypeDefinition } from 'sanity'
 
 import classes from '@/sanity/schemas/documents/classes'
+import formBuilder from '@/sanity/schemas/objects/formBuilder'
+import formBuilderField from '@/sanity/schemas/objects/formBuilderField'
 import pageBuilder from '@/sanity/schemas/objects/pageBuilder'
 import boxedTextWithImage from '@/sanity/schemas/sections/boxedTextWithImage'
 import classList from '@/sanity/schemas/sections/classList'
@@ -28,6 +30,8 @@ types: [
   page,
 	settings,
 	// Object Types
+  formBuilder,
+  formBuilderField,
 	header,
 	imageSimple,
 	link,
