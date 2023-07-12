@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import { FaFacebook, FaInstagram } from 'react-icons/fa'
+import Link from "next/link";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
-import Aoc from '@/components/Aoc'
-import Contact from '@/components/Contact'
+import Aoc from "@/components/Aoc";
+import Contact from "@/components/Contact";
 
 const Footer = () => {
   return (
@@ -25,7 +25,7 @@ const Footer = () => {
                 <FaFacebook size={24} />
               </a>
               <a
-                href="https://www.instagram.com/renegade.mma/"
+                href="https://www.instagram.com/renegade.bjj/"
                 rel="noreferrer"
                 target="_blank"
                 className="hover:text-primary"
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
