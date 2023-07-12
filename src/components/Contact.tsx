@@ -1,6 +1,10 @@
-import React from 'react'
+import React from "react";
 
-const Contact = () => {
+import { slugifyPhoneNumber } from "@/lib/helpers";
+
+const Contact = (props: any) => {
+  const { siteTitle, address, phone, email, googleMapsLink } = props;
+
   return (
     <div id="contact" className="bg-black text-white py-24">
       <div className="container mx-auto">
@@ -11,16 +15,32 @@ const Contact = () => {
             </h2>
           </div>
           <div className="col-span-1 md:col-span-1 md:col-start-1 lg:col-span-1 lg:col-start-2">
-            <address className="not-italic">
-              <p className="">92 Parsons Street</p>
-              <p className="">Kensington VIC</p>
-              <p className="">3031</p>
+            <address
+              itemScope
+              itemType="https://schema.org/LocalBusiness"
+              className="not-italic"
+            >
+              <div className="sr-only" itemProp="name">
+                {siteTitle}
+              </div>
+              <div
+                itemScope
+                itemProp="address"
+                itemType="https://schema.org/PostalAddress"
+              >
+                <p itemProp="streetAddress">{address.street}</p>
+                <p>
+                  <span itemProp="addressLocality">{address.suburb}</span>{" "}
+                  <span itemProp="addressRegion">{address.state}</span>
+                </p>
+                <p itemProp="postalCode">{address.postcode}</p>
+              </div>
               <p className="mt-6">
                 <a
                   className="underline hover:text-primary"
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://goo.gl/maps/n3Da6yoHwQe7nAod7"
+                  href={googleMapsLink}
                 >
                   Google Map
                 </a>
@@ -31,18 +51,20 @@ const Contact = () => {
             <address className="not-italic">
               <p className="">
                 <a
+                  itemProp="telephone"
                   className="underline hover:text-primary"
-                  href="tel:+6139481787"
+                  href={slugifyPhoneNumber(phone)}
                 >
-                  (03) 9482 1787
+                  {phone}
                 </a>
               </p>
               <p className="">
                 <a
+                  itemProp="email"
                   className="underline hover:text-primary"
-                  href="mailto:info@renegadebjj.com.au"
+                  href={`mailto:${email}`}
                 >
-                  info@renegadebjj.com.au
+                  {email}
                 </a>
               </p>
             </address>
@@ -50,7 +72,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

@@ -20,7 +20,6 @@ const Form = (props: any) => {
     errorMessage,
     formId,
   } = props.data;
-  console.log("props.data:", props.data);
 
   const {
     register,

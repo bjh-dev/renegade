@@ -7,13 +7,14 @@ import Memberships from "@/components/Memberships";
 import Reviews from "@/components/Reviews";
 import ScrollUp from "@/components/ScrollUp";
 import TextWithImage from "@/components/TextWithImage";
-import { HomePagePayload } from "@/lib/types";
+import { HomePagePayload, SettingsPayload } from "@/lib/types";
 
 export interface HomePageProps {
   data: HomePagePayload;
+  settings: SettingsPayload;
 }
 
-const HomePage = ({ data }: HomePageProps) => {
+const HomePage = ({ data, settings }: HomePageProps) => {
   const { content } = data;
   return (
     <section className="sections flex flex-col">
@@ -45,7 +46,7 @@ const HomePage = ({ data }: HomePageProps) => {
         }
         return el;
       })}
-      <Footer />
+      <Footer {...settings} />
       <ScrollUp />
     </section>
   );

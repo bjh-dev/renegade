@@ -13,6 +13,20 @@ type Slug = {
 export interface SettingsPayload {
   title: string
   siteUrl: string
+  email: string
+  phone: string
+  address: {
+    street: string
+    suburb: string
+    state: string
+    postcode: string
+  },
+  googleMapsLink: string
+  socialLinks: {
+    _key: string
+    platform: 'facebook' | 'instagram' | 'youtube'
+    url: string
+  }[]
 }
 
 export interface HomePagePayload extends Base{
