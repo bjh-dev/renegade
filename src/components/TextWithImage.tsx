@@ -25,7 +25,7 @@ const TextWithImage = (props: any) => {
         </div>
         <div className="after:col-span-1 col-start-1 lg:col-span-1">
           <Image
-            className="object-fill mx-auto"
+            className="object-fill mx-auto rounded-lg"
             src={urlForImage(image).url()}
             alt={image.alt}
             width={900}

@@ -55,7 +55,7 @@ const Form = (props: any) => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 ">
             {/* Contact information */}
-            <div className="relative overflow-hidden rounded-l-lg bg-gray-800 px-6 py-10 sm:px-10 xl:p-12">
+            <div className="relative overflow-hidden rounded-t-lg lg:rounded-tr-none lg:rounded-l-lg bg-gray-800 px-6 py-10 sm:px-10 xl:p-12">
               <div
                 className="pointer-events-none absolute inset-0 sm:hidden"
                 aria-hidden="true"
@@ -164,7 +164,7 @@ const Form = (props: any) => {
             </div>
 
             {/* Contact form */}
-            <div className="bg-gray-300 rounded-r-lg px-6 py-10 sm:px-10 lg:col-span-2 xl:p-12">
+            <div className="bg-gray-300 rounded-b-lg lg:rounded-r-lg px-6 py-10 sm:px-10 lg:col-span-2 xl:p-12">
               <h3 className="text-lg font-semibold uppercase tracking-wide text-primary">
                 {title}
               </h3>

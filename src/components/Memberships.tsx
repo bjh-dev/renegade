@@ -56,7 +56,7 @@ const Memberships = (props: MembershipProps) => {
           </div>
         </div>
         <div className="col-span-1 xl:col-start-3">
-          <div className="h-full bg-primary p-8 text-center shadow-2xl lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12">
+          <div className="h-full bg-primary p-8 text-center shadow-2xl lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12 rounded-lg">
             <p className="text-2xl font-bold leading-6 text-white">
               Membership
             </p>
