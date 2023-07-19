@@ -1,10 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 
 import { CustomPortableText } from "@/components/CustomPortableText";
 
-const placeId = process.env.NEXT_PUBLIC_PLACES_ID;
 const apiKey = process.env.GOOGLE_KEY;
 const url = `https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJM6hAERld1moRRG9fPzJdqA8&key=${apiKey}`;
 
@@ -73,14 +71,13 @@ type ReviewsProps = {
     shortDescription: string;
     leaveAReview: any;
   };
-  reviews: Review[];
+  reviews?: Review[];
 };
 
 const Reviews = async (props: ReviewsProps) => {
   const { title, subtitle, shortDescription, leaveAReview } = props.data;
   const details = await fetch(url).then((res) => res.json());
   const reviews = details.result.reviews;
-  console.log("review: ", reviews);
   return (
     <div className="bg-gray-900 py-12">
       <div className="container">
@@ -98,9 +95,9 @@ const Reviews = async (props: ReviewsProps) => {
           {shortDescription && <p className="text-white">{shortDescription}</p>}
         </div>
         <div className="py-12 grid grid-cols-1 gap-2 lg:grid-cols-2 lg:gap-12 xl:grid-cols-4">
-          {reviews.slice(0, 4).map((review: any, index: any) => (
-            <div key={review.id} className="col-span-1">
-              <ReviewCard id={index} {...review} darkSection />
+          {reviews.slice(0, 4).map((review: Review, index: any) => (
+            <div key={index} className="col-span-1">
+              <ReviewCard key={index} {...review} />
             </div>
           ))}
         </div>
