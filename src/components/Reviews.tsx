@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa";
 
 import { CustomPortableText } from "@/components/CustomPortableText";
 
-const apiKey = process.env.GOOGLE_KEY;
+const apiKey = process.env.NEXT_PUBLIC_GOOGLE_KEY;
 const url = `https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJM6hAERld1moRRG9fPzJdqA8&key=${apiKey}`;
 
 const StarRating = ({ rating }: { rating: number }) => {
