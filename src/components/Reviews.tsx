@@ -71,7 +71,6 @@ type ReviewsProps = {
     shortDescription: string;
     leaveAReview: any;
   };
-  reviews?: Review[];
 };
 
 const Reviews = async (props: ReviewsProps) => {
@@ -98,7 +97,7 @@ const Reviews = async (props: ReviewsProps) => {
           {reviews ? (
             reviews.slice(0, 4).map((review: Review, index: any) => (
               <div key={index} className="col-span-1">
-                <ReviewCard key={index} {...review} />
+                <ReviewCard {...review} />
               </div>
             ))
           ) : (
