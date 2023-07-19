@@ -95,11 +95,17 @@ const Reviews = async (props: ReviewsProps) => {
           {shortDescription && <p className="text-white">{shortDescription}</p>}
         </div>
         <div className="py-12 grid grid-cols-1 gap-2 lg:grid-cols-2 lg:gap-12 xl:grid-cols-4">
-          {reviews.slice(0, 4).map((review: Review, index: any) => (
-            <div key={index} className="col-span-1">
-              <ReviewCard key={index} {...review} />
-            </div>
-          ))}
+          {reviews ? (
+            reviews.slice(0, 4).map((review: Review, index: any) => (
+              <div key={index} className="col-span-1">
+                <ReviewCard key={index} {...review} />
+              </div>
+            ))
+          ) : (
+            <h3 className="text-center font-semibold text-white text-xl">
+              Reviews not available at the moment
+            </h3>
+          )}
         </div>
         <div className="mt-6 justify-between border-t-2 border-gray-800 pt-6 text-sm text-white lg:flex">
           {leaveAReview && (
