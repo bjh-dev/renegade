@@ -7,8 +7,8 @@ const CovidSafe = (props: any) => {
   const { title, subtitle, text, image } = props.data;
   // console.log('CovidSafe: ', props.data)
   return (
-    <div className="p-12 lg:container">
-      <div className="grid grid-cols-1 place-items-center bg-gray xl:grid-cols-2 rounded-lg">
+    <div className="container py-12">
+      <div className="grid grid-cols-1 place-items-center bg-gray lg:grid-cols-2 rounded-lg">
         <div className="col-span-1">
           <Image
             className="object-fill rounded-lg"
@@ -18,7 +18,7 @@ const CovidSafe = (props: any) => {
             height={900}
           />
         </div>
-        <div className="col-span-1 flex flex-col space-y-6 p-8">
+        <div className="col-span-1 flex flex-col space-y-6 p-0 py-8 lg:p-8">
           <div>
             {subtitle && (
               <h3 className="text-primary uppercase font-bold">{subtitle}</h3>

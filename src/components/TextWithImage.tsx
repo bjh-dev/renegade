@@ -24,13 +24,15 @@ const TextWithImage = (props: any) => {
           {text && <CustomPortableText value={text} paragraphClasses="mt-4" />}
         </div>
         <div className="after:col-span-1 col-start-1 lg:col-span-1">
-          <Image
-            className="object-fill mx-auto rounded-lg"
-            src={urlForImage(image).url()}
-            alt={image.alt}
-            width={900}
-            height={900}
-          />
+          <div className="p-0 md:p-12">
+            <Image
+              className="object-fill mx-auto rounded-lg"
+              src={urlForImage(image).url()}
+              alt={image.alt}
+              width={900}
+              height={900}
+            />
+          </div>
         </div>
       </div>
     </div>

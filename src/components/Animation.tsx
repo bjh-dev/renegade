@@ -1,6 +1,6 @@
-'use client'
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+"use client";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Animation = ({
   fade,
@@ -12,17 +12,17 @@ const Animation = ({
   children,
   delay,
 }: {
-  children: React.ReactNode
-  fade?: boolean
-  duration?: number
-  slideInLeft?: boolean
-  slideInTop?: boolean
-  slideInBottom?: boolean
-  slideInRight?: boolean
-  delay?: number
+  children: React.ReactNode;
+  fade?: boolean;
+  duration?: number;
+  slideInLeft?: boolean;
+  slideInTop?: boolean;
+  slideInBottom?: boolean;
+  slideInRight?: boolean;
+  delay?: number;
 }) => {
-  const ref = useRef(null)
-  const isInView = useInView(ref)
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   return (
     <>
       <motion.div
@@ -45,7 +45,7 @@ const Animation = ({
         {children}
       </motion.div>
     </>
-  )
-}
+  );
+};
 
-export default Animation
+export default Animation;

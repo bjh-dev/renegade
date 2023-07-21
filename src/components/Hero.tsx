@@ -1,11 +1,11 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { CustomPortableText } from '@/components/CustomPortableText'
-import Logo from '@/components/Logo'
-import { urlForImage } from '@/sanity/lib/image'
+import { CustomPortableText } from "@/components/CustomPortableText";
+import Logo from "@/components/Logo";
+import { urlForImage } from "@/sanity/lib/image";
 
 const Hero = (props: any) => {
-  const { title, subtitle, image, shortDescription } = props.data
+  const { title, subtitle, image, shortDescription } = props.data;
   // console.log('Props: ', props)
   // console.log('title: ', props.data)
   return (
@@ -63,7 +63,7 @@ const Hero = (props: any) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
