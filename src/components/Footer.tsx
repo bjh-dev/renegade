@@ -11,11 +11,13 @@ type FooterProps = {
 };
 import Aoc from "@/components/Aoc";
 import Contact from "@/components/Contact";
+import Partners from "@/components/Partners";
 
 const Footer = (props: FooterProps) => {
   const { socialLinks } = props;
   return (
     <footer className="bg-gray-300 text-black">
+      <Partners />
       <Contact {...props} />
       <div className="container border-t-2 border-solid border-gray-300">
         <div className="grid grid-cols-1 place-items-start py-24 md:grid-cols-4 md:place-items-end">
