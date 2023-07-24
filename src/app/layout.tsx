@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import localFont from "next/font/local";
 
@@ -84,6 +85,7 @@ export default function RootLayout({
         className={`flex h-screen w-screen flex-col bg-gray-200 ${gotham.variable} font-sans`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
