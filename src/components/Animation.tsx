@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 
 const Animation = ({
@@ -22,7 +22,6 @@ const Animation = ({
   delay?: number;
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
   return (
     <>
       <motion.div

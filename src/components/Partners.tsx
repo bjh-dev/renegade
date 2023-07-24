@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const Partners = () => {
   return (
     <div className="py-6 text-gray-200 bg-gray-600">
