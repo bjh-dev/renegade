@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@next/env':
     specifier: ^13.4.12
@@ -32,8 +36,8 @@ dependencies:
     specifier: ^0.1.1
     version: 0.1.1(tailwindcss@3.3.2)
   '@types/node':
-    specifier: 20.3.1
-    version: 20.3.1
+    specifier: 20.5.0
+    version: 20.5.0
   '@types/react':
     specifier: 18.2.12
     version: 18.2.12
@@ -84,7 +88,7 @@ dependencies:
     version: 2.12.0(react@18.2.0)
   sanity:
     specifier: ^3.14.3
-    version: 3.14.3(@types/node@20.3.1)(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
+    version: 3.14.3(@types/node@20.5.0)(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
   sanity-plugin-asset-source-unsplash:
     specifier: ^1.1.0
     version: 1.1.0(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.14.3)(styled-components@5.3.11)
@@ -580,6 +584,7 @@ packages:
 
   /@emotion/memoize@0.7.4:
     resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==}
+    requiresBuild: true
     dev: false
     optional: true
 
@@ -1562,7 +1567,7 @@ packages:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.3.1
+      '@types/node': 20.5.0
     dev: false
 
   /@types/hast@2.3.4:
@@ -1594,8 +1599,8 @@ packages:
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
     dev: false
 
-  /@types/node@20.3.1:
-    resolution: {integrity: sha512-EhcH/wvidPy1WeML3TtYFGR83UzjxeWRen9V402T8aUGYsCHOmfoisV3ZSg03gAFIbLq8TnWOJ0f4cALtnSEUg==}
+  /@types/node@20.5.0:
+    resolution: {integrity: sha512-Mgq7eCtoTjT89FqNoTzzXg2XvCi5VMhRV6+I2aYanc6kQCBImeNaAYRs/DyoVqk1YEUJK5gN9VO7HRIdz4Wo3Q==}
     dev: false
 
   /@types/normalize-package-data@2.4.1:
@@ -1823,7 +1828,7 @@ packages:
       '@babel/plugin-transform-react-jsx-self': 7.22.5(@babel/core@7.22.9)
       '@babel/plugin-transform-react-jsx-source': 7.22.5(@babel/core@7.22.9)
       react-refresh: 0.14.0
-      vite: 4.4.4(@types/node@20.3.1)
+      vite: 4.4.4(@types/node@20.5.0)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -4438,7 +4443,7 @@ packages:
       groq: 3.14.1
       next: 13.4.6(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
-      sanity: 3.14.3(@types/node@20.3.1)(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
+      sanity: 3.14.3(@types/node@20.5.0)(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
       styled-components: 5.3.11(@babel/core@7.22.9)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)
     transitivePeerDependencies:
       - supports-color
@@ -5389,7 +5394,7 @@ packages:
       react-infinite-scroll-component: 6.1.0(react@18.2.0)
       react-photo-album: 2.2.2(react@18.2.0)
       rxjs: 7.8.1
-      sanity: 3.14.3(@types/node@20.3.1)(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
+      sanity: 3.14.3(@types/node@20.5.0)(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
       styled-components: 5.3.11(@babel/core@7.22.9)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)
     transitivePeerDependencies:
       - react-dom
@@ -5408,14 +5413,14 @@ packages:
       lodash: 4.17.21
       prop-types: 15.8.1
       react: 18.2.0
-      sanity: 3.14.3(@types/node@20.3.1)(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
+      sanity: 3.14.3(@types/node@20.5.0)(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11)
     transitivePeerDependencies:
       - react-dom
       - react-is
       - styled-components
     dev: false
 
-  /sanity@3.14.3(@types/node@20.3.1)(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11):
+  /sanity@3.14.3(@types/node@20.5.0)(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)(styled-components@5.3.11):
     resolution: {integrity: sha512-KPr0ZsCxSEnrKmzcmDWAJXqgLdUF8HAICJBs+u3YBaIVHJKgk5GAwD/aTJ6d/TrVXjygbqO/ye9eTfqtaGVqfQ==}
     engines: {node: '>=14.18.0'}
     hasBin: true
@@ -5527,7 +5532,7 @@ packages:
       use-device-pixel-ratio: 1.1.2(react@18.2.0)
       use-hot-module-reload: 1.0.3(react@18.2.0)
       use-sync-external-store: 1.2.0(react@18.2.0)
-      vite: 4.4.4(@types/node@20.3.1)
+      vite: 4.4.4(@types/node@20.5.0)
       yargs: 17.7.2
     transitivePeerDependencies:
       - '@types/node'
@@ -6281,7 +6286,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: false
 
-  /vite@4.4.4(@types/node@20.3.1):
+  /vite@4.4.4(@types/node@20.5.0):
     resolution: {integrity: sha512-4mvsTxjkveWrKDJI70QmelfVqTm+ihFAb6+xf4sjEU2TmUCTlVX87tmg/QooPEMQb/lM9qGHT99ebqPziEd3wg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -6309,7 +6314,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.3.1
+      '@types/node': 20.5.0
       esbuild: 0.18.14
       postcss: 8.4.26
       rollup: 3.26.3
