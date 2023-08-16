@@ -1,51 +1,10 @@
-"use client";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-
 import { CustomPortableText } from "@/components/CustomPortableText";
 
-interface FormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  message?: string;
-}
 const Form = (props: any) => {
   const {
     title,
     description,
-    submitText,
-    successMessage,
-    errorMessage,
-    formId,
   } = props.data;
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormData>();
-
-  const [state, setState] = useState("idle");
-  const FORMSPARK_ACTION_URL = `https://api.formspark.io/${formId}`;
-
-  const onSubmit = async (data: FormData) => {
-    setState("Loading");
-    try {
-      await fetch(FORMSPARK_ACTION_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-      setState("Success");
-    } catch {
-      setState("Error");
-    }
-  };
 
   return (
     <div id="apply" className="py-12">
@@ -155,149 +114,37 @@ const Form = (props: any) => {
                   </defs>
                 </svg>
               </div>
-              <div className="mt-6 max-w-3xl text-gray-100">
+              <div className="max-w-3xl text-gray-100">
                 <CustomPortableText
                   value={description}
-                  paragraphClasses="mt-4"
+                  paragraphClasses="first:mt-0 mt-4"
                 />
               </div>
             </div>
 
             {/* Contact form */}
             <div className="bg-gray-300 rounded-b-lg lg:rounded-r-lg px-6 py-10 sm:px-10 lg:col-span-2 xl:p-12">
-              <h3 className="text-lg font-semibold uppercase tracking-wide text-primary">
-                {title}
+              <div className="max-w-xl mx-auto">
+              <h3 className="text-2xl font-semibold uppercase tracking-wide text-primary">
+              Begin your application.
               </h3>
-
-              <form
-                onSubmit={handleSubmit(onSubmit)}
-                className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
-              >
-                <div>
-                  <label
-                    htmlFor="firstName"
-                    className="block text-sm font-medium text-gray-900"
-                  >
-                    First name
-                    <div className="mt-1">
-                      <input
-                        type="text"
-                        id="firstName"
-                        autoComplete="given-name"
-                        className="block w-full rounded-md border-gray-300 px-4 py-3 text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500"
-                        aria-required="true"
-                        {...register("firstName", { required: true })}
-                      />
-                    </div>
-                    {/* <p className="text-xs italic text-red-500">
-                    Please enter your first name.
-                  </p> */}
-                  </label>
-                </div>
-                <div>
-                  <label
-                    htmlFor="lastName"
-                    className="block text-sm font-medium text-gray-900"
-                  >
-                    Last name
-                    <div className="mt-1">
-                      <input
-                        type="text"
-                        id="lastName"
-                        autoComplete="family-name"
-                        className="block w-full rounded-md border-gray-300 px-4 py-3 text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500"
-                        aria-required="true"
-                        {...register("lastName", { required: true })}
-                      />
-                    </div>
-                    {/* <p className="text-xs italic text-red-500">
-                    Please enter your last name.
-                  </p> */}
-                  </label>
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-900"
-                  >
-                    Email
-                    <div className="mt-1">
-                      <input
-                        id="email"
-                        type="email"
-                        autoComplete="email"
-                        className="block w-full rounded-md border-gray-300 px-4 py-3 text-gray-900 shadow-sm focus:border-green-500 focus:ring-green-500"
-                        aria-required="true"
-                        {...register("email", { required: true })}
-                      />
-                    </div>
-                    {/* <p className="text-xs italic text-red-500">
-                    Please enter your email.
-                  </p> */}
-                  </label>
-                </div>
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-gray-900"
-                  >
-                    Phone
-                    <div className="mt-1">
-                      <input
-                        type="tel"
-                        id="phone"
-                        autoComplete="tel"
-                        className="block w-full rounded-md border-gray-300 px-4 py-3 text-gray-900 shadow-sm focus:border-green-500 focus:ring-green-500"
-                        aria-describedby="phone"
-                        aria-required="true"
-                        {...register("phone", { required: true })}
-                      />
-                    </div>
-                  </label>
-                </div>
-                <div className="sm:col-span-2">
-                  <label
-                    htmlFor="message"
-                    className="text-smm block font-medium text-gray-900"
-                  >
-                    Why do you want to train at Renegade?
-                    <div className="mt-1">
-                      <textarea
-                        className="block w-full rounded-md border-gray-300 px-4 py-3 text-gray-900 shadow-sm focus:border-green-500 focus:ring-primary-500"
-                        id="message"
-                        cols={30}
-                        rows={7}
-                        {...register("message", { required: false })}
-                      />
-                    </div>
-                  </label>
-                </div>
-                <div className="sm:col-span-2 sm:flex sm:justify-end">
-                  <button
-                    disabled={state === "Loading"}
-                    type="submit"
-                    className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-primary px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 sm:w-auto"
-                  >
-                    {submitText}
-                  </button>
-                </div>
-                {state === "Error" && (
-                  <div className="col-span-2 mt-4 flex w-full flex-col rounded-md bg-mandy-200 p-4">
-                    <CustomPortableText
-                      value={errorMessage}
-                      paragraphClasses="text-sm"
-                    />
+              <p className="my-6">To begin the application process, please send us an email with the following information:</p>
+              <div className="flex flex-col space-y-6">
+                <div className="flex items-center space-x-6">
+                   <div className="flex-shrink-0 w-12 h-12 border-2 border-primary rounded-full flex justify-center items-center">
+                    <p>1</p>
                   </div>
-                )}
-                {state === "Success" && (
-                  <div className="col-span-2 mt-4 flex w-full flex-col rounded-md bg-primary-200 p-4">
-                    <CustomPortableText
-                      value={successMessage}
-                      paragraphClasses="text-sm"
-                    />
+                  <div>Your Name</div>
+              </div>
+              <div className="flex items-center space-x-6">
+                   <div className="flex-shrink-0 w-12 h-12 border-2 border-primary rounded-full flex justify-center items-center">
+                    <p>2</p>
                   </div>
-                )}
-              </form>
+                  <div>Why you want to become a member</div>
+              </div>
+              </div>
+              <p className="mt-6 text-xl"><a className="text-primary hover:underline font-semibold" href="mailto:info@renegadebjj.com.au">info@renegadebjj.com.au</a></p>
+              </div>
             </div>
           </div>
         </div>

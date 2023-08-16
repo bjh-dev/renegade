@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import localFont from "next/font/local";
 
+import Favicon from "@/components/Favicon";
+
 const gotham = localFont({
   src: [
     {
@@ -81,6 +83,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Favicon />
+      </head>
       <body
         className={`flex h-screen w-screen flex-col bg-gray-200 ${gotham.variable} font-sans`}
       >
