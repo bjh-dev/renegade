@@ -15,8 +15,8 @@ dependencies:
     specifier: 1.3.0
     version: 1.3.0
   '@sanity/client':
-    specifier: 6.1.7
-    version: 6.1.7
+    specifier: 6.4.9
+    version: 6.4.9
   '@sanity/icons':
     specifier: 2.4.1
     version: 2.4.1(react@18.2.0)
@@ -25,7 +25,7 @@ dependencies:
     version: 1.0.2
   '@sanity/preview-kit':
     specifier: 2.6.0
-    version: 2.6.0(@sanity/client@6.1.7)(react@18.2.0)
+    version: 2.6.0(@sanity/client@6.4.9)(react@18.2.0)
   '@sanity/ui':
     specifier: 1.7.11
     version: 1.7.11(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
@@ -45,8 +45,8 @@ dependencies:
     specifier: 18.2.7
     version: 18.2.7
   '@vercel/analytics':
-    specifier: 1.0.1
-    version: 1.0.1
+    specifier: 1.0.2
+    version: 1.0.2
   autoprefixer:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.24)
@@ -60,8 +60,8 @@ dependencies:
     specifier: 13.4.19
     version: 13.4.19(eslint@8.48.0)(typescript@5.2.2)
   framer-motion:
-    specifier: 10.13.0
-    version: 10.13.0(react-dom@18.2.0)(react@18.2.0)
+    specifier: 10.16.1
+    version: 10.16.1(react-dom@18.2.0)(react@18.2.0)
   next:
     specifier: 13.4.19
     version: 13.4.19(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
@@ -78,8 +78,8 @@ dependencies:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
   react-hook-form:
-    specifier: 7.45.2
-    version: 7.45.2(react@18.2.0)
+    specifier: 7.45.4
+    version: 7.45.4(react@18.2.0)
   react-icons:
     specifier: 4.10.1
     version: 4.10.1(react@18.2.0)
@@ -1086,17 +1086,6 @@ packages:
       - supports-color
     dev: false
 
-  /@sanity/client@6.1.7:
-    resolution: {integrity: sha512-crleZDBic3VpmBhIuiVZNkJMxAWE/fj5v+hHBXt+2psW1CJrvBdTLX14f4cqC40W1YDDE4ZGrDkYuph6Y6/YzQ==}
-    engines: {node: '>=14.18'}
-    dependencies:
-      '@sanity/eventsource': 5.0.0
-      get-it: 8.4.3
-      rxjs: 7.8.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
   /@sanity/client@6.4.9:
     resolution: {integrity: sha512-9y/exbu9kBgIuXouUWlHLGfPm3/jxRP8bSaysteILTQknLQZHExSyjFsYD/CxH3Xk43NzELqktvEXlP1/kZ6LA==}
     engines: {node: '>=14.18'}
@@ -1290,7 +1279,7 @@ packages:
       - supports-color
     dev: false
 
-  /@sanity/preview-kit@2.3.3(@sanity/client@6.1.7)(react@18.2.0):
+  /@sanity/preview-kit@2.3.3(@sanity/client@6.4.9)(react@18.2.0):
     resolution: {integrity: sha512-4TREUzu3Yfiys3SWmYMLQN+ifUYaVoDG/+CLDEOlI9p3LpO+V6z/OfXhrTjIPy+dNnbl320hipCdHGwdF2g6xw==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -1300,7 +1289,7 @@ packages:
       react:
         optional: true
     dependencies:
-      '@sanity/client': 6.1.7
+      '@sanity/client': 6.4.9
       '@sanity/eventsource': 5.0.0
       '@sanity/groq-store': 2.3.0
       '@vercel/stega': 0.1.0
@@ -1316,7 +1305,7 @@ packages:
       - supports-color
     dev: false
 
-  /@sanity/preview-kit@2.6.0(@sanity/client@6.1.7)(react@18.2.0):
+  /@sanity/preview-kit@2.6.0(@sanity/client@6.4.9)(react@18.2.0):
     resolution: {integrity: sha512-IOnc7+TBd6Zz74DXW/koQdxdQuIMn7r1NxhA+GVs1eS3zrNMm8sdEchCYtRmwAmYZj2pCbujo3QNiTcie0jsNA==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -1326,7 +1315,7 @@ packages:
       react:
         optional: true
     dependencies:
-      '@sanity/client': 6.1.7
+      '@sanity/client': 6.4.9
       '@sanity/eventsource': 5.0.0
       '@sanity/groq-store': 4.0.4
       '@vercel/stega': 0.1.0
@@ -1756,8 +1745,8 @@ packages:
       - '@codemirror/search'
     dev: false
 
-  /@vercel/analytics@1.0.1:
-    resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==}
+  /@vercel/analytics@1.0.2:
+    resolution: {integrity: sha512-BZFxVrv24VbNNl5xMxqUojQIegEeXMI6rX3rg1uVLYUEXsuKNBSAEQf4BWEcjQDp/8aYJOj6m8V4PUA3x/cxgg==}
     dev: false
 
   /@vercel/error-utils@1.0.10:
@@ -3279,24 +3268,6 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: false
 
-  /framer-motion@10.13.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-xKhw9VCizmwEHbopOfluaoVunGHSZyMztGbTvsgOYqCjaKu6qtlwWY1J+6GhL41NY1P157JgEikjDm67XCFnvQ==}
-    peerDependencies:
-      react: ^18.0.0
-      react-dom: ^18.0.0
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      tslib: 2.6.0
-    optionalDependencies:
-      '@emotion/is-prop-valid': 0.8.8
-    dev: false
-
   /framer-motion@10.16.1(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-K6TXr5mZtitC/dxQCBdg7xzdN0d5IAIrlaqCPKtIQVdzVPGC0qBuJKXggHX1vjnP5gPOFwB1KbCCTWcnFc3kWg==}
     peerDependencies:
@@ -4437,9 +4408,9 @@ packages:
       sanity: ^3.0.0
       styled-components: ^5.2.0
     dependencies:
-      '@sanity/client': 6.1.7
+      '@sanity/client': 6.4.9
       '@sanity/icons': 2.4.1(react@18.2.0)
-      '@sanity/preview-kit': 2.3.3(@sanity/client@6.1.7)(react@18.2.0)
+      '@sanity/preview-kit': 2.3.3(@sanity/client@6.4.9)(react@18.2.0)
       '@sanity/types': 3.15.1
       '@sanity/ui': 1.7.11(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
       '@sanity/webhook': 2.0.0
@@ -5073,8 +5044,8 @@ packages:
       use-sidecar: 1.1.2(@types/react@18.2.21)(react@18.2.0)
     dev: false
 
-  /react-hook-form@7.45.2(react@18.2.0):
-    resolution: {integrity: sha512-9s45OdTaKN+4NSTbXVqeDITd/nwIg++nxJGL8+OD5uf1DxvhsXQ641kaYHk5K28cpIOTYm71O/fYk7rFaygb3A==}
+  /react-hook-form@7.45.4(react@18.2.0):
+    resolution: {integrity: sha512-HGDV1JOOBPZj10LB3+OZgfDBTn+IeEsNOKiq/cxbQAIbKaiJUe/KV8DBUzsx0Gx/7IG/orWqRRm736JwOfUSWQ==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
@@ -5480,7 +5451,7 @@ packages:
       esbuild-register: 3.4.2(esbuild@0.18.14)
       execa: 2.1.0
       exif-component: 1.0.1
-      framer-motion: 10.13.0(react-dom@18.2.0)(react@18.2.0)
+      framer-motion: 10.16.1(react-dom@18.2.0)(react@18.2.0)
       get-it: 8.4.3
       get-random-values-esm: 1.0.0
       groq-js: 1.1.12
