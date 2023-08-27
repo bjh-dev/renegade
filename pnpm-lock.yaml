@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@next/env':
-    specifier: 13.4.12
-    version: 13.4.12
+    specifier: 13.4.19
+    version: 13.4.19
   '@portabletext/react':
     specifier: 3.0.4
     version: 3.0.4(react@18.2.0)
@@ -875,10 +875,6 @@ packages:
     resolution: {integrity: sha512-ssHKb3p0MxhJXT2i7UBmgAY1BIM3Uq/D772Qutu3EVmxWIyNMU12nQ0rL3Fhu+MiFtiTzyTmd3xGwEf3ON5PSA==}
     dependencies:
       '@lezer/common': 1.0.3
-    dev: false
-
-  /@next/env@13.4.12:
-    resolution: {integrity: sha512-RmHanbV21saP/6OEPBJ7yJMuys68cIf8OBBWd7+uj40LdpmswVAwe1uzeuFyUsd6SfeITWT3XnQfn6wULeKwDQ==}
     dev: false
 
   /@next/env@13.4.19:
