@@ -1,7 +1,7 @@
 import { createClient } from 'next-sanity'
+import { SanityClient } from 'sanity'
 
 import { apiVersion, dataset, projectId, useCdn } from '../env'
-import { SanityClient } from 'sanity'
 
 export function getClient(preview?: { token: string }): SanityClient {
   const client = createClient({
